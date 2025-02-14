@@ -166,7 +166,7 @@ a {
 .home .right .img img {
   height: 370px;
   width: 290px;
-  animation-name: superman;
+  animation: superman 3s infinite, shadowFade 3s infinite;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   transform: rotate(-20deg);
@@ -186,6 +186,36 @@ a {
   box-shadow: 0 0 20px #51bbcc;
 }
 
+@keyframes superman {
+  0% {
+    transform: translate(0, 0px) rotate(-20deg);
+  }
+
+  25% {
+    border-color: rgb(239, 244, 11);
+  }
+
+  50% {
+    transform: translate(0, 10px) rotate(-20deg);
+  }
+
+  75% {
+    border-color: rgb(130, 217, 160);
+  }
+
+  100% {
+    transform: translate(0, -0px) rotate(-20deg);
+  }
+}
+@keyframes shadowFade {
+  0%, 100% {
+    box-shadow: 0 0 30px #51bbcc;
+  }
+
+  50% {
+    box-shadow: 0 0 50px #51bbcc;
+  }
+}
 
 /* Tablet screens */
 @media (max-width: 1024px) {
